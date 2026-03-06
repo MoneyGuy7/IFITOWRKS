@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  background: #121212;
+  color: #eee;
+  font-family: sans-serif;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+/* Toolbar styling */
+#toolbar {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #1e1e1e;
+}
+#toolbar button, #toolbar input {
+  margin-right: 10px;
+  background: none;
+  border: none;
+  color: #eee;
+  cursor: pointer;
+}
+#toolbar input[type="color"] {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+}
+
+/* Waveform and canvas overlay */
+#wave-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: #2e2e2e;
+}
+#waveform {
+  width: 100%;
+  height: 100%;
+}
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Timeline scrubber */
+#timeline {
+  display: flex;
+  align-items: center;
+  background: #181818;
+  padding: 5px;
+}
+#timeline input[type="range"] {
+  flex: 1;
+  margin: 0 10px;
+}
