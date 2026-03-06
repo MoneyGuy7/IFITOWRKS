@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Storyboard Editor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+  <!-- Toolbar -->
+  <div id="toolbar">
+    <button id="tool-pencil" title="Pencil">✏️</button>
+    <button id="tool-eraser" title="Eraser">🧹</button>
+    <button id="tool-line" title="Line">📏</button>
+    <button id="tool-rect" title="Rectangle">▯</button>
+    <button id="tool-arrow" title="Arrow">➡️</button>
+    <button id="tool-text" title="Text">🅰️</button>
+    <input type="color" id="color-picker" value="#ffffff" title="Brush Color">
+    <input type="range" id="size-picker" min="1" max="50" value="5" title="Brush Size">
+    <button id="undo" title="Undo">↩️</button>
+    <button id="redo" title="Redo">↪️</button>
+    <input type="file" id="file-input" accept="audio/*,video/*" title="Upload Audio/Video">
+    <input type="file" id="image-input" accept="image/*" title="Upload Image">
+  </div>
+
+  <!-- Waveform Container -->
+  <div id="wave-container">
+    <div id="waveform"></div>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <!-- Annotations / Timeline (Optional) -->
+  <div id="timeline">
+    <input type="range" id="time-range" min="0" max="100" value="0">
+    <span id="time-display">00:00</span>
+    <button id="add-note" title="Add Note">📝</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
